@@ -1,2 +1,5 @@
-a.out
-/.vscode
+/target/
+Cargo.lock
+**/*.rs.bk
+.exe
+.pdb
