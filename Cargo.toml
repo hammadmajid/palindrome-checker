@@ -2,7 +2,12 @@
 name = "palindrome-checker"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+authors = ["Hammad Majid <GitHub: @hammadmajid>"]
+description = "A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards."
+readme = "README.md"
+repository = "https://github.com/hammads-archive/palindrome-checker"
+license = "Unlicense license"
+keywords = ["palindrome", "palindrome-checker"]
+categories = ["command-line-utilities"]
 
 [dependencies]
