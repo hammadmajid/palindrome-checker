@@ -1,6 +1,6 @@
 [package]
 name = "palindrome-checker"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2021"
 authors = ["Hammad Majid <GitHub: @hammadmajid>"]
 description = "A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards."
