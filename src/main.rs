@@ -33,5 +33,21 @@ fn options(mut s: String) -> String {
             s = s.to_lowercase();
         }
     }
+    {
+        msg = "Ignore special chracters?(Y\\n)?".to_string();
+        let ignore_special_chars: String = read_from_prompt(msg);
+        if ignore_special_chars.to_lowercase().contains('y') {
+            let mut tmp_s: String = String::new();
+            let mut i: usize = 0;
+            for ch in s.chars() {
+                // #[allow(unused_assignments)]
+                if ch.is_alphanumeric() {
+                    tmp_s.insert(i, ch);
+                    i += 1;
+                }
+            }
+            s = tmp_s;
+        }
+    }
     return s;
 }
