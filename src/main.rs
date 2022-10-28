@@ -3,7 +3,11 @@ use std::io::{stdin, stdout, Write};
 fn main() {
     let mut input: String = read_from_prompt("Enter a String>".to_string());
     input = options(input);
-    print!("Your Input: {}", input);
+    if input == input.chars().rev().collect::<String>() {
+        print!("Is Palindrome");
+    } else {
+        print!("Not a Palindrome");
+    }
 }
 
 fn read_from_prompt(msg: String) -> String {
