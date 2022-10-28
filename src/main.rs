@@ -49,5 +49,22 @@ fn options(mut s: String) -> String {
             s = tmp_s;
         }
     }
+    {
+        msg = "Ignore numbers?(Y\\n)>".to_string();
+        let igonore_numbers: String = read_from_prompt(msg);
+        if igonore_numbers.to_lowercase().contains('y') {
+            if igonore_numbers.to_lowercase().contains('y') {
+                let mut tmp_s: String = String::new();
+                let mut i: usize = 0;
+                for ch in s.chars() {
+                    if !ch.is_numeric() {
+                        tmp_s.insert(i, ch);
+                        i += 1;
+                    }
+                }
+                s = tmp_s;
+            }
+        }
+    }
     return s;
 }
