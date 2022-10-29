@@ -1,8 +1,10 @@
 use std::io::{stdin, stdout, Write};
+pub mod console;
 
 fn main() {
-    let mut input: String = read_from_prompt("Enter a String>".to_string());
-    input = options(input);
+    let msg: String = "Enter a String:".to_string();
+    console::print_line(msg);
+    let input: String = console::read_line();
     if input == input.chars().rev().collect::<String>() {
         print!("Is Palindrome");
     } else {
@@ -10,6 +12,8 @@ fn main() {
     }
 }
 
+// ! deprecated
+#[allow(dead_code)]
 fn read_from_prompt(msg: String) -> String {
     {
         print!("{} ", msg);
@@ -27,6 +31,8 @@ fn read_from_prompt(msg: String) -> String {
     }
 }
 
+// ! deprecated
+#[allow(dead_code)]
 fn options(mut s: String) -> String {
     #[allow(unused_assignments)]
     let mut msg: String = String::new();
