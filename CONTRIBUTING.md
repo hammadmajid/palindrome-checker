@@ -9,3 +9,4 @@
    - Write a good commit message.
    - Follow the rust style guide where possible.
    - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
+   - Use pull_request_template provided.
